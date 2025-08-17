@@ -1,0 +1,93 @@
+:root {
+    --vermelho-escuro: #8B0000;
+    --vermelho: #DC143C;
+    --cinza-escuro: #36454F;
+    --cinza-claro: #f8f9fa;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: var(--cinza-claro);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--vermelho-escuro) !important;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--vermelho) !important;
+}
+
+.nav-link.active {
+    color: var(--vermelho) !important;
+    font-weight: 700;
+    border-bottom: 2px solid var(--vermelho);
+}
+
+.hero {
+    background: linear-gradient(to right, var(--vermelho), var(--vermelho-escuro));
+    color: white;
+    padding: 8rem 1rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.container-custom {
+    max-width: 800px;
+}
+
+.btn-primary {
+    background-color: var(--vermelho-escuro);
+    border-color: var(--vermelho);
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho-escuro);
+}
+
+/* Estilo para o botão de WhatsApp */
+.btn-success {
+    background-color: #25D366;
+    border-color: #128C7E;
+}
+
+.btn-success:hover {
+    background-color: #128C7E;
+    border-color: #25D366;
+}
+
+footer {
+    background-color: var(--cinza-claro);
+    color: var(--vermelho-escuro);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto;
+}
