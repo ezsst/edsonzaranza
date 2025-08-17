@@ -42,7 +42,6 @@ body {
 #hero-text {
     background-color: var(--cinza-escuro);
     height: calc(2 * var(--navbar-height));
-    /* As classes do Bootstrap já centralizam o conteúdo */
 }
 
 #hero-text h1, #hero-text p {
@@ -51,13 +50,12 @@ body {
 
 /* Nova seção da imagem */
 #hero-image-container {
-    flex-grow: 1; /* Faz com que a div ocupe todo o espaço vertical restante */
-    min-height: 400px; /* Define uma altura mínima para a imagem, se a tela for muito pequena */
+    flex-grow: 1;
+    min-height: 400px;
 }
 
 #hero-image-container img {
-    /* As classes do Bootstrap já tornam a imagem responsiva */
-    object-fit: cover; /* Garante que a imagem preencha a div, cortando se necessário */
+    object-fit: cover;
 }
 
 .btn-primary {
@@ -92,22 +90,24 @@ footer {
     margin-top: auto;
 }
 
+/* Esconde o link do WhatsApp na navbar para telas grandes */
+.whatsapp-brand-link {
+    display: none;
+}
+
 /* Oculta o texto do botão do WhatsApp em telas pequenas */
 @media (max-width: 991.98px) {
     .whatsapp-btn-text {
         display: none;
     }
     
-    /* Regra para mostrar o ícone ao lado do nome da marca apenas em telas pequenas */
-    .whatsapp-mobile-icon {
-        display: inline-block;
-        margin-left: 0.5rem; /* Espaço entre o nome e o ícone */
+    /* Mostra o ícone de WhatsApp ao lado do nome em telas pequenas */
+    .whatsapp-brand-link {
+        display: block;
+        margin-left: 0.5rem;
     }
-}
 
-/* Regra para ocultar o ícone em telas grandes */
-@media (min-width: 992px) {
-    .whatsapp-mobile-icon {
-        display: none;
+    .navbar-brand {
+        margin-right: 0 !important;
     }
 }
