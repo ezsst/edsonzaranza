@@ -1,6 +1,7 @@
 :root {
-    --vermelho-escuro: #8B0000;
-    --vermelho: #DC143C;
+    --verde-escuro: #006400; /* Verde Floresta */
+    --verde: #2E8B57; /* Verde Mar */
+    --verde-claro: #90EE90; /* Verde Claro */
     --cinza-escuro: #36454F;
     --cinza-claro: #f8f9fa;
     --branco: #ffffff;
@@ -16,28 +17,29 @@ body {
 }
 
 .navbar {
-    background-color: var(--cinza-claro);
+    background-color: var(--verde-claro);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .navbar-brand, .nav-link {
-    color: var(--vermelho-escuro) !important;
+    color: var(--verde-escuro) !important;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 .navbar-brand:hover, .nav-link:hover {
-    color: var(--vermelho) !important;
+    color: var(--verde) !important;
 }
 
 .nav-link.active {
-    color: var(--vermelho) !important;
+    color: var(--verde) !important;
     font-weight: 700;
-    border-bottom: 2px solid var(--vermelho);
+    border-bottom: 2px solid var(--verde);
 }
 
 .hero {
-    background: linear-gradient(to right, var(--vermelho), var(--vermelho-escuro));
+    background: url('assets/img/capa-seguranca.jpg') no-repeat center center;
+    background-size: cover;
     color: white;
     padding: 8rem 1rem;
     text-align: center;
@@ -45,6 +47,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1, .hero p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
@@ -62,21 +84,22 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--vermelho-escuro);
-    border-color: var(--vermelho);
+    background-color: var(--verde);
+    border-color: var(--verde-escuro);
     font-weight: 600;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: var(--vermelho);
-    border-color: var(--vermelho-escuro);
+    background-color: var(--verde-escuro);
+    border-color: var(--verde);
 }
 
 /* Estilo para o botão de WhatsApp */
 .btn-success {
     background-color: #25D366;
     border-color: #128C7E;
+    color: var(--branco);
 }
 
 .btn-success:hover {
@@ -85,9 +108,16 @@ body {
 }
 
 footer {
-    background-color: var(--cinza-claro);
-    color: var(--vermelho-escuro);
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
+}
+
+.whatsapp-btn-container {
+    position: fixed;
+    top: 100px; /* Ajuste a distância do topo */
+    right: 20px;
+    z-index: 1000;
 }
