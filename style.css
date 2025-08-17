@@ -5,6 +5,7 @@
     --cinza-escuro: #36454F;
     --cinza-claro: #f8f9fa;
     --branco: #ffffff;
+    --navbar-height: 56px; /* Altura padrão da navbar do Bootstrap */
 }
 
 body {
@@ -37,53 +38,26 @@ body {
     border-bottom: 2px solid var(--verde);
 }
 
-.hero {
-    color: white;
-    padding: 4rem 1rem;
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    min-height: 630px; 
+/* Nova seção de texto */
+#hero-text {
+    background-color: var(--cinza-escuro);
+    height: calc(2 * var(--navbar-height));
+    /* As classes do Bootstrap já centralizam o conteúdo */
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-
-.hero > .container {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero h1, .hero p {
+#hero-text h1, #hero-text p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 1rem;
 }
 
-.hero-image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto; 
-    z-index: 1;
-    opacity: 1;
-    object-fit: contain;
-    max-height: 100%;
+/* Nova seção da imagem */
+#hero-image-container {
+    flex-grow: 1; /* Faz com que a div ocupe todo o espaço vertical restante */
+    min-height: 400px; /* Define uma altura mínima para a imagem, se a tela for muito pequena */
+}
+
+#hero-image-container img {
+    /* As classes do Bootstrap já tornam a imagem responsiva */
+    object-fit: cover; /* Garante que a imagem preencha a div, cortando se necessário */
 }
 
 .btn-primary {
@@ -111,8 +85,8 @@ body {
 }
 
 footer {
-    background-color: var(--verde-claro);
-    color: var(--verde-escuro);
+    background-color: var(--verde-escuro);
+    color: var(--branco);
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
