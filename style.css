@@ -85,8 +85,8 @@ body {
 }
 
 footer {
-    background-color: var(--verde-escuro);
-    color: var(--branco);
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
@@ -95,6 +95,19 @@ footer {
 /* Oculta o texto do botão do WhatsApp em telas pequenas */
 @media (max-width: 991.98px) {
     .whatsapp-btn-text {
+        display: none;
+    }
+    
+    /* Regra para mostrar o ícone ao lado do nome da marca apenas em telas pequenas */
+    .whatsapp-mobile-icon {
+        display: inline-block;
+        margin-left: 0.5rem; /* Espaço entre o nome e o ícone */
+    }
+}
+
+/* Regra para ocultar o ícone em telas grandes */
+@media (min-width: 992px) {
+    .whatsapp-mobile-icon {
         display: none;
     }
 }
