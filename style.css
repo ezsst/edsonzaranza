@@ -40,9 +40,8 @@ body {
 
 /* Nova seção de texto */
 #hero-text {
-    background-color: var(--cinza-claro);
-    height: calc(2 * var(--navbar-height));
-    
+    background-color: var(--verde-escuro);
+    padding: 3rem 1rem; /* Adiciona espaçamento interno superior e inferior */
 }
 
 #hero-text h1, #hero-text p {
