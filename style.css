@@ -90,7 +90,7 @@ body {
 footer {
     background-color: var(--verde-escuro);
     color: var(--branco);
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
     margin-top: auto;
 }
