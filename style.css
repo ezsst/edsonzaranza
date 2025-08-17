@@ -17,18 +17,18 @@ body {
 }
 
 .navbar {
-    background-color: var(--verde-claro);
+    background-color: var(--verde-escuro);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .navbar-brand, .nav-link {
-    color: var(--verde-escuro) !important;
+    color: var(--branco) !important;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 .navbar-brand:hover, .nav-link:hover {
-    color: var(--verde) !important;
+    color: var(--verde-claro) !important;
 }
 
 .nav-link.active {
@@ -118,9 +118,9 @@ footer {
     margin-top: auto;
 }
 
-.whatsapp-btn-container {
-    position: fixed;
-    top: 100px; 
-    right: 20px;
-    z-index: 1000;
+/* Oculta o texto do botão do WhatsApp em telas pequenas */
+@media (max-width: 991.98px) {
+    .whatsapp-btn-text {
+        display: none;
+    }
 }
