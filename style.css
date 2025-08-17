@@ -38,14 +38,16 @@ body {
 }
 
 .hero {
-    background: url('assets/img/capa-seguranca.jpg') no-repeat center center;
-    background-size: cover;
+    background-image: url('assets/img/og-image.png'); /* Substitua pelo caminho da sua imagem */
+    background-repeat: no-repeat;
+    background-position: center bottom; /* Posiciona a imagem no centro e na parte inferior */
+    background-size: contain; /* Garante que a imagem caiba dentro da div sem cortar ou esticar */
     color: white;
-    padding: 8rem 1rem;
+    padding: 4rem 1rem 20% 1rem; /* Aumenta o padding inferior para dar espaço à imagem */
     text-align: center;
     flex-grow: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinha o texto no topo */
     justify-content: center;
     position: relative;
 }
@@ -57,7 +59,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6); /* Opcional: Adiciona uma camada escura para melhorar o contraste do texto */
 }
 
 .hero > .container {
