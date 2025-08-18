@@ -99,13 +99,12 @@ Esconde o link do WhatsApp na navbar para telas grandes */
 .whatsapp-brand-link {
     display: none;
 }    
-    /* Mostra o ícone de WhatsApp ao lado do nome em telas pequenas */
-    .whatsapp-brand-link {
-        display: block;
-        margin-left: 0.5rem;
-    }
+/* Mostra o ícone de WhatsApp ao lado do nome em telas pequenas */
+.whatsapp-brand-link {
+    display: block;
+    margin-left: 0.5rem;
+}
 
-    .navbar-brand {
-        margin-right: 0 !important;
-    }
+.navbar-brand {
+    margin-right: 0 !important;
 }
